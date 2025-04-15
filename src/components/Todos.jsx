@@ -23,8 +23,11 @@ const Todos = ({todos, setTodos}) => {
     return (
         <ul>
             {todos.map((todo) => <li key={todo.id}>
-                <span>id: {todo.id}</span>
-                <span>body: {todo.body}</span>
+            <span>task: {todo.task || todo.body || todo.title}</span>
+
+        
+
+                <span>task: {todo.body || todo.title}</span>
                 <button onClick={() => handlDelete(todo.id)} >delete</button>
             </li>
             )}
